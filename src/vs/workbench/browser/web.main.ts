@@ -2,6 +2,7 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
+// RENDERER PROCESS
 
 import { mark } from '../../base/common/performance.js';
 import { domContentLoaded, detectFullscreen, getCookieValue, getWindow } from '../../base/browser/dom.js';
@@ -10,7 +11,7 @@ import { ILogService, ConsoleLogger, getLogLevel, ILoggerService, ILogger } from
 import { ConsoleLogInAutomationLogger } from '../../platform/log/browser/log.js';
 import { Disposable, DisposableStore, toDisposable } from '../../base/common/lifecycle.js';
 import { BrowserWorkbenchEnvironmentService, IBrowserWorkbenchEnvironmentService } from '../services/environment/browser/environmentService.js';
-import { Workbench } from './workbench.js';
+import { Workbench } from './workbench.js'; // --> manages the overall UI structure and layout system: Title, side, activity, status bars, etc.
 import { RemoteFileSystemProviderClient } from '../services/remote/common/remoteFileSystemProviderClient.js';
 import { IWorkbenchEnvironmentService } from '../services/environment/common/environmentService.js';
 import { IProductService } from '../../platform/product/common/productService.js';

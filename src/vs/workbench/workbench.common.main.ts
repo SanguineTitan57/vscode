@@ -7,7 +7,7 @@
 
 import '../editor/editor.all.js';
 
-import './api/browser/extensionHost.contribution.js';
+import './api/browser/extensionHost.contribution.js'; // --> separate process that runs the extensions preventing them from blocking the UI thread
 import './browser/workbench.contribution.js';
 import './browser/workbench.zenMode.contribution.js';
 

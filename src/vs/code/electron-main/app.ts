@@ -2,6 +2,7 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
+// SERVES AS THE MAIN PROCESS
 
 import { app, BrowserWindow, desktopCapturer, Details, globalShortcut, GPUFeatureStatus, powerMonitor, protocol, screen as electronScreen, session, Session, systemPreferences, WebFrameMain } from 'electron';
 import { addUNCHostToAllowlist, disableUNCAccessRestrictions } from '../../base/node/unc.js';
@@ -204,6 +205,7 @@ type OSProxyConfigClassification = {
  * The main VS Code application. There will only ever be one instance,
  * even if the user starts many instances (e.g. from the command line).
  */
+// ENTRY POINT of the WHOLE APP
 export class CodeApplication extends Disposable {
 
 	private static readonly SECURITY_PROTOCOL_HANDLING_CONFIRMATION_SETTING_KEY = {
